@@ -6,7 +6,12 @@ Restricción: Utilizar el método append
 """
 
 # COMPLETAR - INICIO
-lista_01 = 
+lista_01 = []
+# No se debe colocar lista_01 = lista_01.append() sino que directamente se usa el método sobre la variable
+lista_01.append("T")
+lista_01.append("U")
+lista_01.append("P")
+lista_01.append(4)
 # COMPLETAR - FIN
 
 assert len(lista_01) == 4
@@ -20,7 +25,8 @@ Restricción: Utilizar el método pop
 lista = ["ho", "la", 81, 6, 42, "como", "estas?"]
 
 # COMPLETAR - INICIO
-
+elemento_extraido = lista.pop(3)
+# Recordar que las listas arrancan con puntero de valor cero (primer elemento de la lista es la posición cero)
 # COMPLETAR - FIN
 
 assert elemento_extraido == 6
@@ -36,7 +42,12 @@ lista_b = ["4", "5", "6"]
 lista_c = ["siete", "ocho", "nueve"]
 
 # COMPLETAR - INICIO
-
+# Primero debo definir la lista donde voy a guardar las listas a concatenar
+listas_concatenadas_01 = []
+# Luego voy agregando las listas una por una con el método extend (se pueden pasar de a un argumento, no todas juntas)
+listas_concatenadas_01.extend(lista_a)
+listas_concatenadas_01.extend(lista_b)
+listas_concatenadas_01.extend(lista_c)
 # COMPLETAR - FIN
 
 assert listas_concatenadas_01 == [1, 2, 3, "4", "5", "6", "siete", "ocho", "nueve"]
@@ -51,7 +62,8 @@ variable_01 = 2
 lista_nueva = [0, 1, 3, 4]
 
 # COMPLETAR - INICIO
-
+lista_nueva.insert(2,variable_01)
+# Recordar que las posiciones o punteros de las listas arrancan en cero!
 # COMPLETAR - FIN
 
 assert lista_nueva == [0, 1, 2, 3, 4]
@@ -65,7 +77,13 @@ Restricción: Utilizar el método append junto al indexado simple
 lista = ["ho", 3.1416, 42, 81, 6, "la"]
 
 # COMPLETAR - INICIO
-
+# Primero debo definir la lista vacía.
+lista_primero_y_ultimo = []
+# Luego debo agregar los elementos que me piden
+lista_primero_y_ultimo.append(lista[0])
+#print(lista_primero_y_ultimo)
+lista_primero_y_ultimo.append(lista[-1])
+#print(lista_primero_y_ultimo)
 # COMPLETAR - FIN
 
 assert lista_primero_y_ultimo == ["ho", "la"]
@@ -79,7 +97,10 @@ Restricción: Utilizar el método append junto al indexado simple
 lista = ["ho", 3.1416, "la", 81, 6, 42]
 
 # COMPLETAR - INICIO
-
+lista_primeros = []
+lista_primeros.append(lista[0])
+lista_primeros.append(lista[1])
+lista_primeros.append(lista[-4])
 # COMPLETAR - FIN
 
 assert lista_primeros == ["ho", 3.1416, "la"]
@@ -93,7 +114,11 @@ Restricción: Utilizar indexado múltiple
 lista = ["ho", 3.1416, "la", 81, 6, 42]
 
 # COMPLETAR - INICIO
-
+lista_primeros = []
+# Primero defino la lista vacía
+lista_primeros = lista[0:3]
+# lista y dentro de los parámetros le indico el puntero inicial y el puntero final SIN INCLUIR que debe tomar
+#print(lista_primeros)
 # COMPLETAR - FIN
 
 assert lista_primeros == ["ho", 3.1416, "la"]
@@ -108,7 +133,12 @@ Restricción: Utilizar el método extend junto al indexado múltiple
 lista = ["ho", "la", 81, 6, 42, "como", "estas?"]
 
 # COMPLETAR - INICIO
-
+lista_primeros_y_ultimos = []
+lista_primeros_y_ultimos.extend(lista[:2])
+# extend agrega múltiples elementos y con el indexado múltiple le indico tomar los 1ros dos elementos
+lista_primeros_y_ultimos.extend(lista[5:])
+# y del 6to en adelante
+#print(lista_primeros_y_ultimos)
 # COMPLETAR - FIN
 
 assert lista_primeros_y_ultimos == ["ho", "la", "como", "estas?"]
@@ -123,21 +153,22 @@ lista_01 = [0, 1, 2, 3]
 lista_02 = [5, 6]
 
 # COMPLETAR - INICIO
-
+lista_concatenada = lista_01+lista_02
 # COMPLETAR - FIN
 
 assert lista_concatenada == [0, 1, 2, 3, 5, 6]
 
 
 """
-Concatenar 3 veces la siguiente lisa consigo misma
-Restricción: Utiliar el operador *
+Concatenar 3 veces la siguiente lista consigo misma
+Restricción: Utilizar el operador *
 """
 
 lista_01 = [0, 1, 0, 1, 0, 1]
 
 # COMPLETAR - INICIO
-
+lista_duplicada = lista_01*3
+#print(lista_duplicada)
 # COMPLETAR - FIN
 
 assert lista_duplicada == [0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1]
@@ -145,14 +176,15 @@ assert lista_duplicada == [0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1]
 
 """
 Verificar si el siguiente elemento pertenece a la lista
-Restricción: Utiliar el operador in
+Restricción: Utilizar el operador in
 """
 
 elemento = 1.0
 lista = [0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 1.0, 1, 0, 1, 0, 1]
 
 # COMPLETAR - INICIO
-
+# la variable variable_booleana guardará TRUE porque 1.0 (elemento) se encuentra dentro de la lista[]
+variable_booleana = elemento in lista
 # COMPLETAR - FIN
 
 assert variable_booleana
@@ -167,7 +199,7 @@ lista_01 = [1, 2, 3, 4.5, 6, 7]
 lista_02 = [1, 3, 2, 4, 5, 6, 7]
 
 # COMPLETAR - INICIO
-
+son_iguales = lista_01 == lista_02
 # COMPLETAR - FIN
 
 assert not son_iguales
@@ -183,7 +215,7 @@ Restricción: Utilizar el método any
 notas = [False, False, False, False, False, False, False, False, False]
 
 # COMPLETAR - INICIO
-
+no_tiene_examenes_aprobados = not any(notas)
 # COMPLETAR - FIN
 
 assert no_tiene_examenes_aprobados
@@ -199,7 +231,7 @@ Restricción: Utilizar el método all
 notas = [True, True, False, True, True, True, True, True, True, True, True, True]
 
 # COMPLETAR - INICIO
-
+tiene_todo_aprobado = all(notas)
 # COMPLETAR - FIN
 
 assert not tiene_todo_aprobado
