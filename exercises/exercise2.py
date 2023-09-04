@@ -60,7 +60,7 @@ variable_04 = "90"
 variable_05 = 100
 
 # COMPLETAR - INICIO
-resultado = variable_03 or variable_01 or not variable_02 or variable_04 == "g"
+resultado = variable_03 or variable_01 or not variable_02 or variable_04 == "g" or variable_05
 # COMPLETAR - FIN
 
 assert resultado == 80
