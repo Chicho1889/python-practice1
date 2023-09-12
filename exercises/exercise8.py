@@ -33,7 +33,7 @@ Compras = {"Mario Pedernera":["cafetera", "TV 50 pulgads", "mouse gamer"],"Ezequ
 # COMPLETAR - FIN
 #print (list(Compras.items()))
 """
-NO PUEDO ENCONTRAR EL ERROR DEL ASSERT...
+NO PUEDO ENCONTRAR EL ERROR DEL ASSERT... (lo encontré, estaba mal escrito pulgadas... en el assert dice "pulgads", me volví loco para encontrarlo)
 """
 #assert (
 #    (Compras["Mario Pedernera"] == ["cafetera", "TV 50 pulgads", "mouse gamer"])
