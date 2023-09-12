@@ -29,8 +29,9 @@ Definir un diccionario para las 'Compras' que contenga los siguiente valores:
 """
 
 # COMPLETAR - INICIO
-Compras = {"Mario Pedernera":["cafetera", "TV 50 pulgadas", "mouse gamer"],"Ezequiel Castello":["ipad", "ipod", "iphone"],"Pablo Piristrelli":["Reproductor de CD", "Videograbadora"]}
+Compras = {"Mario Pedernera":["cafetera", "TV 50 pulgads", "mouse gamer"],"Ezequiel Castello":["ipad", "ipod", "iphone"],"Pablo Piristrelli":["Reproductor de CD", "Videograbadora"]}
 # COMPLETAR - FIN
+#print (list(Compras.items()))
 """
 NO PUEDO ENCONTRAR EL ERROR DEL ASSERT...
 """
